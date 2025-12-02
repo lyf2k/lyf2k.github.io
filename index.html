@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Yufan Liu - Academic Homepage</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- 关键：viewport 标签，保证移动端逻辑宽度正确 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 1000px; /* 桌面端宽度限制 */
+      line-height: 1.6;
+      color: #333;
+      background: #f9fafb;
+    }
+    h1 {
+      margin-bottom: 5px;
+      color: #0b132b;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: #555;
+      margin: 2px 0;
+    }
+    .email {
+      font-size: 14px;
+      color: #777;
+      margin: 2px 0 10px 0;
+    }
+    .address {
+      font-size: 14px;
+      color: #777;
+      margin: 2px 0;
+    }
+    a {
+      color: #0b5fa5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #004080;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 4px;
+      color: #0b132b;
+    }
+    ul, ol { padding-left: 20px; }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+    }
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* 目录样式 */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 8px 0;
+    }
+    nav ul li a {
+      font-size: 14px;
+      color: #0b5fa5;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: #004080;
+    }
+    /* header 两栏布局 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    nav {
+      margin-top: 20px; /* 往下调一点 */
+    }
+/* 平板竖屏：上下分布 */
+@media (max-width: 992px) and (orientation: portrait) {
+  body {
+    margin: 0;
+    padding: 0 30px;   /* 左右留白 */
+    max-width: 100%;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 平板设备：769px ~ 1024px，一律横向分布，留白 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    margin: 0 auto;
+    padding: 0 40px;   /* 平板左右留白 */
+    max-width: 900px;  /* 控制内容宽度，避免贴边 */
+  }
+  header {
+    flex-direction: row; /* 横向排列 */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* 手机竖屏：上下分布（≤768px） */
+@media (max-width: 768px) and (orientation: portrait) {
+  body {
+    margin: 0;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* 关键修正：横屏手机（高度较小）强制横向分布
+   例：iPhone 14 Pro Max 横屏约 932×430，会命中这条 */
+@media (orientation: landscape) and (max-height: 500px) {
+  body {
+    margin: 0;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  header {
+    flex-direction: row;          /* 横向排列 */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 左侧信息 -->
+    <div>
+      <h1>刘 煜凡 (Yufan Liu)</h1>
+      <p class="subtitle"><strong>Ph.D. Student in Mathematics</strong></p>
+      <p class="email">Email: liuyufan [at] mail [dot] ustc [dot] edu [dot] cn</p>
+      <p class="address">
+        <a href="https://math.ustc.edu.cn/main.htm" target="_blank">School of Mathematical Sciences</a>,<br>
+        <a href="https://www.ustc.edu.cn/" target="_blank">University of Science and Technology of China</a>,<br>
+        No.96, JinZhai Road Baohe District, Hefei, Anhui, 230026, P.R.China.
+      </p>
+    </div>
+
+    <!-- 右侧目录 -->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research Interests</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#preprints">Preprints</a></li>
+        <li><a href="#talks">Talks & Presentations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+       I am a Ph.D. student at the School of Mathematical Sciences, University of Science and Technology of China (USTC), under the supervision of <a href="https://faculty.ustc.edu.cn/yqliang/" target="_blank">Professor Yongqi Liang (梁永祺)</a>. My research focuses on algebraic number theory and arithmetic geometry.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        2021–present: <strong>Ph.D. Student in Mathematics</strong><br>
+        School of Mathematical Sciences, University of Science and Technology of China (USTC)<br>
+        Advisor: Yongqi Liang
+      </li>
+      <br>
+      <li>
+        2017–2021: <strong>Bachelor of Mathematics and Applied Mathematics</strong><br>
+        School of the Gifted Young, University of Science and Technology of China (USTC)
+      </li>
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+    <p><strong>Algebraic Number Theory and Arithmetic Geometry</strong></p>
+    <ul>
+      <li>local-global principle</li>
+      <li>weak/strong approximation</li>
+      <li>Brauer-Manin obstruction</li>
+      <li>cohomological obstructions</li>
+      <li>rational points</li>
+      <li>integral points</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p><em>None yet.</em></p>
+  </section>
+
+  <section id="preprints">
+    <h2>Preprints</h2>
+    <ol reversed>
+      <li>
+        Kai Huang and <em>Yufan Liu</em> (2025). 
+        <strong>Local-global principle for triangularizability and diagonalizability of matrices</strong>. 
+        <a href="https://arxiv.org/abs/2511.15827" target="_blank">arXiv:2511.15827 [math.NT]</a>
+      </li>
+      <li>
+        Yongqi Liang and <em>Yufan Liu</em> (2025). 
+        <strong>Varieties with prescribed finite unramified Brauer groups and subgroups precisely obstructing the Hasse principle</strong>. 
+        <a href="https://arxiv.org/abs/2504.18293" target="_blank">arXiv:2504.18293 [math.NT]</a>
+      </li>
+    </ol>
+  </section>
+
+<section id="talks">
+  <h2>Talks & Presentations</h2>
+  <ul>
+    <li>
+      <strong>Varieties with prescribed finite unramified Brauer groups and subgroups precisely obstructing the Hasse principle</strong><br>
+      <em>Y-RANT VII</em>, University of Nottingham, UK — September 2025
+    </li>
+    <li>
+      <strong>Varieties with prescribed finite unramified Brauer groups and subgroups precisely obstructing the Hasse principle</strong><br>
+      <em>ENTR Workshop 25</em>, University of Paderborn, Germany — August 2025
+    </li>
+    <li>
+      <strong>Brauer group of abelian normic bundle</strong><br>
+      <em>第六届珞珈数学博士生论坛</em>, Wuhan University, China — April 2025
+    </li>
+  </ul>
+</section>
+
+
+  <footer>
+    Last updated: Dec 2025
+  </footer>
+</body>
+<script>
+  window.onload = function() {
+    // 如果有哈希，清除它
+    if (location.hash) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+    // 回到顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+</html>
