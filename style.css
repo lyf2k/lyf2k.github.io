@@ -45,10 +45,7 @@
       color: #777;
       text-align: center;
     }
-    /* 平滑滚动 */
-    html {
-      scroll-behavior: smooth;
-    }
+
     /* 目录样式 */
     nav ul {
       list-style: none;
@@ -139,16 +136,21 @@
   }
 }
 
-/* Return button 简单样式 */
-    .return-btn {
-      display: block;
-      margin-top: 8px;
-      font-size: 13px;
-      color: #0b5fa5;
-      text-align: right;
-    }
-    .return-btn:hover {
-      text-decoration: underline;
-      color: #004080;
-    }
+.return-wrap {
+  text-align: right;
+}
+
+.return-btn {
+  display: inline-block;
+  font-size: 13px;
+  color: #0b5fa5;
+  text-decoration: none;
+}
+
+.return-btn:hover {
+  text-decoration: underline;
+  color: #004080;
+}
+
+
 
