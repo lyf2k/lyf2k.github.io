@@ -1,0 +1,154 @@
+   body {
+      font-family: Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 1000px; /* 桌面端宽度限制 */
+      line-height: 1.6;
+      color: #333;
+      background: #f9fafb;
+    }
+    h1 {
+      margin-bottom: 5px;
+      color: #0b132b;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: #555;
+      margin: 2px 0;
+    }
+    .email {
+      font-size: 14px;
+      color: #777;
+      margin: 2px 0 10px 0;
+    }
+    .address {
+      font-size: 14px;
+      color: #777;
+      margin: 2px 0;
+    }
+    a {
+      color: #0b5fa5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #004080;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 4px;
+      color: #0b132b;
+    }
+    ul, ol { padding-left: 20px; }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+    }
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* 目录样式 */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 8px 0;
+    }
+    nav ul li a {
+      font-size: 14px;
+      color: #0b5fa5;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: #004080;
+    }
+    /* header 两栏布局 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    nav {
+      margin-top: 20px; /* 往下调一点 */
+    }
+/* 平板竖屏：上下分布 */
+@media (max-width: 992px) and (orientation: portrait) {
+  body {
+    margin: 0;
+    padding: 0 30px;   /* 左右留白 */
+    max-width: 100%;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 平板设备：769px ~ 1024px，一律横向分布，留白 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    margin: 0 auto;
+    padding: 0 40px;   /* 平板左右留白 */
+    max-width: 900px;  /* 控制内容宽度，避免贴边 */
+  }
+  header {
+    flex-direction: row; /* 横向排列 */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* 手机竖屏：上下分布（≤768px） */
+@media (max-width: 768px) and (orientation: portrait) {
+  body {
+    margin: 0;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* 关键修正：横屏手机（高度较小）强制横向分布
+   例：iPhone 14 Pro Max 横屏约 932×430，会命中这条 */
+@media (orientation: landscape) and (max-height: 500px) {
+  body {
+    margin: 0;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  header {
+    flex-direction: row;          /* 横向排列 */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+/* Return button 简单样式 */
+    .return-btn {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      color: #0b5fa5;
+      text-align: right;
+    }
+    .return-btn:hover {
+      text-decoration: underline;
+      color: #004080;
+    }
+
